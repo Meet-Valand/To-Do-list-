@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.hover-effect {
+  transition: all 0.3s ease;
+}
+
+.hover-effect:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+/* Add viewport height fix for mobile browsers */
+@media screen and (max-width: 768px) {
+  :root {
+    --vh: 1vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .hover-effect:hover {
+    transform: scale(1.02); /* Smaller scale on mobile */
+  }
+}

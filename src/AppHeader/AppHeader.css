@@ -1,0 +1,49 @@
+.bounce-enter {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.bounce-enter-active {
+  transform: translateY(0);
+  opacity: 1;
+  animation: bounceDown 1500ms ease;
+}
+.bounce-exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+.bounce-exit-active {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 1500ms ease, opacity 1500ms ease;
+}
+
+/* Keyframes for bounce effect */
+@keyframes bounceDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.193;
+  }
+  37% {
+  }
+  43% {
+    transform: translateY(10px); /* overshoot slightly */
+    opacity: 0.363;
+  }
+  50% {
+    opacity: 0.4578;
+  }
+  59% {
+    transform: translateY(-20px); /* bounce back */
+    opacity: 0.678;
+  }
+  89% {
+    opacity: 0.888;
+  }
+  100% {
+    opacity: 2.3;
+    transform: translateY(0); /* settle in position */
+  }
+}
